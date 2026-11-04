@@ -1,0 +1,24 @@
+name: Build iOS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the mod (iOS arm64)
+        uses: geode-sdk/build-geode-mod@main
+        id: build
+        with:
+          target: iOS
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: click-indicator-ios
+          path: ${{ steps.build.outputs.build-output }}
+          if-no-files-found: error
