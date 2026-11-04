@@ -6,7 +6,7 @@
   "version": "v1.0.0",
   "id": "yourname.click-indicator",
   "name": "Click Indicator",
-  "developer": "yourname",
+  "developer": "Minixxx",
   "description": "Affiche une image ON/OFF qui reagit instantanement aux clics du joueur. Images personnalisables, position libre.",
   "tags": ["utility", "gameplay", "interface"],
   "settings": {
